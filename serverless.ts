@@ -35,9 +35,9 @@ const serverlessConfig: AWS = {
           'dynamodb:UpdateItem',
           'dynamodb:DeleteItem'
         ],
-        Resource: [
-          { "Fn::GetAtt": ['UsersDynamoDBTable', 'Arn'] },
-        ]
+        // Resource: [
+        //   { "Fn::GetAtt": ['UsersDynamoDBTable', 'Arn'] },
+        // ]
       }
     ]
   },
@@ -45,7 +45,7 @@ const serverlessConfig: AWS = {
     // TODO: Plans to upgrade for esbuild compatibility
     // 'serverless-esbuild',
     // Enable below plugin for automatic domain management.
-    'serverless-domain-manager',
+    // 'serverless-domain-manager',
     'serverless-offline'
   ],
   custom: {
